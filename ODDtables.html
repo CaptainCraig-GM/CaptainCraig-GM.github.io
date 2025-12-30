@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Style/style.css">
+
+</head>
+<body>
+
+<h1>Terrain</h1>
+<p>Type, Costs, features and creatures.</p>
+<table style="width: 90%; margin: auto;" id="special-table">
+    <colgroup>
+        <col style="width: 60px;background-color: rgb(223, 223, 223);">
+        <col style="background-color: rgb(169, 228, 134);">
+        <col style="background-color: rgb(20, 92, 5);">
+        <col style="background-color: rgb(55, 123, 201);">
+        <col style="background-color: rgb(25, 28, 37);">
+        <col style="background-color: rgb(167, 178, 194);">
+        <col style="background-color: rgb(214, 216, 121);">
+    </colgroup>
+    <tr><td>Desc</td><td>Rolling fields of scrub grasses, untouched by humanity. Dangerous skies.</td>
+        <td id="wl">Thick fairy tale woods. Few adventurers return. Elven Settlements.</td>
+        <td>Quickly flowing, Wildly dangerous. Deathly to even unarmored heroes.</td>
+        <td id="wl">Deeper into swamps travels back into the Jurassic period. Alien plants.</td>
+        <td>Frozen Ice Age Wastes. Skies swarming with dragon-kin, deep caverns house dwarven strongholds. Cavemen and wooly mammoths.</td>
+        <td>Vast red alien wastes. John Carter and Star Wars deeper in.</td></tr>
+    <tr><th></th><th>Grassland</th><th id="wl">Woods</th><th>River</th><th id="wl">Swamp</th><th>Mountain</th><th>Desert</th></tr>
+    <tr><td>Cost</td>   <td>&#11044;</td>   <td id="wl">&#11044;&#11044;</td><td>near</td><td id="wl">&#11044;&#11044;&#11044;</td><td>&#11044;&#11044;&#11044;</td><td>&#11044;&#11044;</td></tr>
+    <tr><td>Chance of Feature</td><td>45%</td><td id="wl">33%</td><td>12%</td><td id="wl">33</td><td>25%</td><td>13%</td></tr>
+    <tr><td>2</td><td>Red Dragon</td>       <td id="wl">Manticore</td>      <td>Drag.Turtle</td>        <td id="wl">Black Dragon</td>       <td>White Dragon</td>       <td>Spaceman</td></tr>
+    <tr><td>3</td><td>Flier &#8634;</td>    <td id="wl">Medusa</td>         <td>Pirate Crew</td>        <td id="wl">d8 Nixies</td>          <td>d2 Yeti</td>            <td>Brown Dragon</td></tr>
+    <tr><td>4</td><td>d3 H. Giants</td>     <td id="wl">d20 Ents</td>       <td>2d8 Mermen</td>         <td id="wl">2d8 Mermen</td>         <td>Giants &#8634;+1</td>   <td>2d20 Jawas</td></tr>
+    <tr><td>5</td><td>Lycan &#8634;</td>    <td id="wl">d20 Centaurs</td>   <td>Swimmer &#8634;</td>    <td id="wl">Swimmer &#8634;</td>    <td>Demi &#8634;</td>       <td>Calbro Trap</td></tr>
+    <tr><td>6</td><td>Demi &#8634;</td>     <td id="wl">d8 Pixies</td>      <td>Flier &#8634;</td>      <td id="wl">Animal d4</td>          <td>Flier &#8634;</td>      <td>Vallot</td></tr>
+    <tr><td>7</td><td>Men &#8634;</td>      <td id="wl">Animals d6+5</td>   <td>Animals d4</td>         <td id="wl">4d4 Zombies</td>        <td>Animals d12+6</td>      <td>d12 Verg</td></tr>
+    <tr><td>8</td><td>Animals d8+2</td>     <td id="wl">Lycan &#8634;</td>  <td>Undead &#8634;</td>     <td id="wl">Dino &#8634;</td>       <td>d12 Mammoth</td>        <td>2d4 White Apes</td></tr>
+    <tr><td>9</td><td>Flier &#8634;</td>    <td id="wl">Dryad</td>          <td>2d12 Lizard Folk</td>   <td id="wl">d6 Cavemen</td>         <td>d12 Worgs</td>          <td>d6 Blue Apes</td></tr>
+    <tr><td>10</td><td>d100 Giant Ants</td> <td id="wl">Minotaur</td>       <td>d8 Trolls</td>          <td id="wl">Dino &#8634;+1</td>     <td>d8 Cavemen</td>         <td>d12 Sith</td></tr>
+    <tr><td>11</td><td>Demi &#8634;</td>    <td id="wl">Gorgon</td>         <td>Demi &#8634;</td>       <td id="wl">Dino &#8634;+2</td>     <td>Balrog</td>             <td>d2 Banths</td></tr>
+    <tr><td>12</td><td>Wiz.on Dragon</td>   <td id="wl">Unicorn</td>        <td>Blue Dragon</td>        <td id="wl">Dino &#8634;+3</td>     <td>Red Dragon</td>         <td>Martian</td></tr>
+</table>
+
+<h1>Feature Type</h1>
+<table>
+    <colgroup>
+        <col>
+        <col style="border-right: 3px solid black;">
+    </colgroup>
+    <tr><th>d6</th><th>Type</th><th>Landmark</th><th>Lair</th><th>Ruins</th><th>Civilization</th></tr>
+    <tr><td>1</td><td>Landmark</td><td>Rocky Outcropping</td><td>Small Cavern</td><td>Keep</td><td>Keep</td></tr>
+    <tr><td>2</td><td>Lair</td><td>Huge Plant</td><td>Medium Cavern</td><td>Monastery</td><td>Monastery</td></tr>
+    <tr><td>3</td><td>Landmark</td><td>Missing/Destroyed</td><td>Large Cavern</td><td>Tower</td><td>Tower</td></tr>
+    <tr><td>4</td><td>Lair</td><td>Striking Beauty</td><td>Nest/Den</td><td>Ancient</td><td>Hermit</td></tr>
+    <tr><td>5</td><td>Ruins</td><td>Chasm</td><td>Camp</td><td>Elf/Dwarf</td><td>Hamlet</td></tr>
+    <tr><td>6</td><td>Civilization</td><td>Scifi Strange</td><td>Catacombs</td><td>Weird</td><td>Faction</td></tr>
+</table>
+
+<h1>Creature Tables</h1>
+<p><b>Number of Creatures:</b> few(lair)</p>
+<div class="row">
+    <div class="column2" style="width: fit-content;">
+        <table id="ct">
+            <tr><th>Men</th>                <th>Flyer</th><th></th>       <th>Undead</th>             <th>Demi-Human</th></tr>
+            <tr><td>Traders<br>d8</td>         <td>Pegasi<br>d8(3d10)</td><td>1</td>  <td>Skele<br>d6(army)</td>     <td>Kobolds<br>d12(3d12)</td></tr>
+            <tr><td>Nomads<br>d4(d4x10)</td>   <td>Roc<br>1(d2)</td><td>2</td>        <td>Zomboid<br>d6(army)</td>   <td>Goblins<br>d4+4(d20+20)</td></tr>
+            <tr><td>Brigands<br>d8(4d12)</td>  <td>Chimera<br>1(2)</td><td>3</td>     <td>Ghouls<br>d4</td>          <td>Orcs<br>d8(d12+12)</td></tr>
+            <tr><td>Berserkers<br>d8(3d6)</td> <td>Hippogriffs<br>d6(3d12)</td><td>4</td><td>Wights<br>d8(2d12)</td> <td>Hobgoblins<br>d8(d12+12)</td></tr>
+            <tr><td>Escapee<br>d4</td>         <td>Manticores<br>1(2)</td><td>5</td>  <td>Wraiths<br>1</td>          <td>Gnolls<br>d10(2d10)</td></tr>
+            <tr><td>Knight<br>*</td>            <td>Wyvern<br>1(d4)</td><td>6</td>     <td>Mummie<br>1(d12)</td>      <td>Ogres<br>d2(d2+2)</td></tr>
+            <tr><td>Wizard<br>*</td>            <td>Dragons<br>1(d3)</td><td>7</td>    <td>Spectre<br>1</td>          <td>Trolls<br>d12(d30)</td></tr>
+            <tr><td>Cleric<br>*</td>            <td></td><td>8</td>                 <td>Vampires<br>d2(3d4)</td>   <td>Giants<br>d2(d12+3)</td></tr>
+            <tr><td>Cavemen<br>d12(d2x10)</td> <td></td><td>9</td>                 <td>Ghost<br>1</td>            <td>Gnome/Elf/Dwarf<br>d8(army)</td></tr>
+            <tr><td>Martians<br>d6</td>        <td></td><td>10</td>                <td></td>                   <td>Treants<br>d10(4d10)</td></tr>
+        </table>
+    </div>
+    <div class="column2" style="width: fit-content;">
+        <table id="ct">
+            <tr><th colspan="3">Animals</th></tr>
+            <tr><th>Wilds</th>          <th></th>         <th>Caverns</th></tr>
+            <tr><td>Giant Leeches</td>  <td>1</td>    <td>Spiders</td></tr>
+            <tr><td>Giant Crabs</td>    <td>2</td>     <td>Centipede</td></tr>
+            <tr><td>Giant Snake</td>    <td>3</td>     <td>Lizard</td></tr>
+            <tr><td>Crocodiles</td>     <td>4</td>      <td>Toad</td></tr>
+            <tr><td>Horses</td>         <td>5</td>     <td>Ants</td></tr>
+            <tr><td>Cow/Elk/Goats</td>  <td>6</td>  <td>Beetle</td></tr>
+            <tr><td>Deer/Stag</td>      <td>7</td>  <td>Scorpion</td></tr>
+            <tr><td>Boar</td>           <td>8</td>  <td>Bear</td></tr>
+            <tr><td>Bear</td>     <td>9</td></tr> 
+            <tr><td>Large Cat</td> <td>10</td></tr> 
+            <tr><td>Wolf/Warg</td> <td>11</td></tr> 
+            <tr><td>Owlbear</td>   <td>12</td></tr> 
+            <tr><td>Cocatrice</td> <td>13</td></tr> 
+            <tr><td>Griffin</td>  <td>14</td></tr> 
+            <tr><td>Wyvern</td>   <td>15</td></tr> 
+            <tr><td>Roc</td>      <td>16</td></tr> 
+            <tr><td>Balrog</td>   <td>17</td></tr> 
+            <tr><td>Dragon</td>    <td>18</td></tr> 
+        </table>
+    </div>
+    <div class="column2">
+        <table id="ct">
+            <tr><th>Swimmer</th>            <th>Dragon</th><th></th>           <th>Dinosaur</th>               <th>Lycanthrope</th></tr>
+            <tr><td>G.Crabs<br>d12</td>        <td>Dragon<br>1(d3)</td><td>1</td>     <td>lil guys<br>d12(3d12)</td>     <td>wolf<br>d2(d8)</td></tr>
+            <tr><td>Nixies<br>d10</td>         <td>Cockatrice<br>1(d3)</td><td>2</td> <td>Frilly<br>d3(3d8)</td>         <td>boar<br>d3(2d8)</td></tr>
+            <tr><td>G.Octopi<br>d2</td>        <td>Basilisk<br>1(d2)</td><td>3</td>   <td>Stego<br>d4+4(d12+12)</td>     <td>tiger<br>1(d3)</td></tr>
+            <tr><td>G.Squid<br>d2</td>         <td>Wyvern<br>1(d2)</td><td>4</td>     <td>Bronto<br>d12(4d12)</td>       <td>bear<br>d3(2d6)</td></tr>
+            <tr><td>Krakken<br>1</td>          <td>Chimera<br>1(d2)</td><td>5</td>    <td>Tricer<br>d3(2d6)</td>         <th>Giant</th></tr>
+            <tr><td>G.Snake<br>d6</td>         <td>Hydra<br>1</td><td>6</td>          <td>Pterod<br>d12(d10x10)</td>     <td>Hill<br>d3</td></tr>
+            <tr><td>Crocodiles<br>d8</td>      <td></td><td>7</td>                 <td>Veloc<br>d8(2d8)</td>          <td>Fire<br>d3(d12)</td></tr>
+            <tr><td>G Leeches<br>d10</td>      <td></td><td>8</td>                 <td>T.Rex<br>9(d3)</td>            <td>Ice<br>d3(d12)</td></tr>
+            <tr><td>Mermen<br>d8(2d20)</td>    <td></td><td>9</td>                 <td></td>                       <td>Cloud<br>d3(d12)</td></tr>
+            <tr><td>Dragon Turtle<br>1</td>    <td></td><td>10</td>                <td></td>                       <td>Storm<br>d3(d12)</td></tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+<h1>Encounter Hints</h1>
+<div class="row">
+    <div class="column2" style="width: fit-content;">
+        <table>
+            <tr><th>d12</th><th>Encounter</th></tr>
+            <tr><td>1-3</td><td>Solo creature</td></tr>
+            <tr><td>4-6</td><td>Two Creatures</td></tr>
+            <tr><td>7-8</td><td>NPC + Creature</td></tr>
+            <tr><td>9</td><td>Faction + Creature</td></tr>
+            <tr><td>10</td><td>Faction</td></tr>
+            <tr><td>11-12</td><td>NPC</td></tr>
+        </table>
+    </div>
+    <div class="column2">
+        <table id="ct">
+            <tr><th colspan="3">Motivation</th></tr>
+            <tr><th>Thinking</th><th>d8</th><th>Animal</th></tr>
+            <tr><td>Destroy</td><td>1</td><td>Territorial</td></tr>
+            <tr><td>Hide</td><td>2</td><td>Hunger</td></tr>
+            <tr><td>Hunt</td><td>3</td><td>Hunger</td></tr>
+            <tr><td>Attentive</td><td>4</td><td>Hunger</td></tr>
+            <tr><td>Distracted</td><td>5</td><td>Ranging</td></tr>
+            <tr><td>Inquisitive</td><td>6</td><td>Curious</td></tr>
+            <tr><td>barter</td><td>7</td><td>Resting</td></tr>
+            <tr><td>party</td><td>8</td><td>Needs Help</td></tr>
+        </table>
+    </div>
+</div>
+
+
+<h1>Keeps, Monasteries, Towers</h1>
+<p><br>1 hex adjacent to structure kept free from monster, hence the tax or tribute.</p>
+<table>
+    <tr><th></th><th colspan="2">Keep</th><th colspan="2">Monastery</th><th colspan="2">Tower</th></tr>
+    <tr><td>Alignment 50-50</td><td>Lawful</td><td>Chaotic</td><td>Lawful</td><td>Chaotic</td><td>Lawful</td><td>Chaotic</td></tr>
+    <tr><td>Leader</td><td>Lord</td><td>Despot</td><td>Patriarch</td><td>High Priest</td><td>Wizard</td><td>Necromancer</td></tr>
+    <tr><td>Goons</td><td>Knights<br>Warriors<br>Demi</td>
+                    <td>Brigands<br>Orcs<br>Demi</td>
+                    <td>Clerics<br>Monks<br>Ents</td>            
+                    <td>Zealots<br>Berserkers<br>demi</td>
+                    <td>Wyvern<br>Dragon<br>Weird</td>    
+                    <td>Undead<br>Devils</td></tr>
+    <tr><td>Mounts</td><td>Horses<br>Griffons<br>Pegasi</td>       <td>Horses<br>Worg<br>Big Cats</td>
+                    <td>Horses<br>Hippogriffs<br>...</td>          <td>Worgs<br>Spiders<br>Giants</td>
+                    <td>Wyvern<br>Dragon<br>dinosaur</td>          <td>Wyvern<br>Giant Toad<br>Spider</td></tr>
+    <tr><td>Followers</td><td colspan="2">d100 Soldiers</td><td>3d10 Scholars</td><td>3d10 Fanatics</td><td>d12 Students</td><td>3d20 Undead</td></tr>
+    <tr><td>Action !</td><td>Lord will ride out with goons and demand a joust. Winning grants hospitality for a month, losing or
+                            declining they demand your armour, or tribute.</td>
+                        <td>Despot will ride out and attempt to slay the PCs to loot them, else hide and prep for a siege if the PCs are tough.</td>
+                        <td>Patriarch will ride out and demand a tithe (1/8 the PCs wealth) else request a quest. Tithe or quest grants 1 month hospitality.</td>
+                        <td>High Priest will ride out and demand a tithe (^) else a quest. Refusal of either prompts an attack.</td>
+                        <td>Wizard will demand a magical item, refusal risks a foul spell or trick.</td>
+                        <td>Necromancer will demand a magical item, refusal risks attack, curse, or geas to quest for one.</td></tr>
+</table>
+
+<p>
+Goblin > Hobgoblin > Bugbear<br>
+Siege Spells?<br><br>
+banth -10 legged muscly lions<br>
+Vallot -10 legged, frog headed dogs (tusked)<br>
+Verg- shaggy yaks, tall haunches<br>
+sith -huge hornet monstrosities<br>
+Jawas -lil dudes in robes, turbines and goggles<br>
+White/Blue apes- white huge and strong, blue are white + smart<br>
+calot trap- venus fly trap, like antlion
+</p>
+
+
+<p><br><br><a href="index.html">Return to Index</a><br><br></p>
+</body>
+</html>

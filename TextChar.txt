@@ -1,0 +1,40 @@
+-----Fantasy Heartbreaker----
+
+ Name: Hugh G. Rection
+Level: 0
+Class: Scab
+
+Armour: 0   |   HP: X / X
+
+ -~ ABILITIES ~-
+ Strength: X / X
+Dexterity: X / X
+ Charisma: X / X
+
+ -~ GEAR ~-
+L hand:
+R hand:
+Belt 1:
+Belt 2:
+Pack 1:
+Pack 2:
+Pack 3:
+Pack 4:
+Pack 5:
+Pack 6:
+  Misc:
+Coin =>  Coppers 0,   Silvers 0,    Gold 0
+
+-~ CLASS ~-
+Class Boon:
+Perk A:
+Perk B:
+Perk C:
+Perk D:
+Perk E:
+
+-~* NOTES *~-
+here
+
+-=*@ MAGIC @*=-
+here

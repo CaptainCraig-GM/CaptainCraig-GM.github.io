@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Style/style.css">
+
+</head>
+<body>
+        <h1>Overview</h1> <div id="Overview"></div>
+        <p>In this game, characters stay squishy, even at higher levels, because levels grant more tools, not more power. Magic is powerful and scary.<br>
+            <b>Combat should not be taken lightly!</b><br>
+            Gameplay is highly proceduralized from a Referee's perspective, and player skill is prioritized over character's abilities. Asking lots
+            of questions and acting cleverly on the information gathered prevents you putting yourself in danger.<br>
+            Make a goal for your character, and follow it's lead.
+        </p>
+
+
+        <h1>Character Stats</h1>
+        <h3>Abilities</h3>
+        <p>Player characters have three ability scores: <b>Strength, Dexterity, Charisma</b> that are rated from 3 to 18.<br></p>
+        <ul><li><b>Strength:</b> Muscles, Health, Vim and Viogur</li>
+            <li><b>Dexterity:</b> Balance, Agility, Reflexes</li>
+            <li><b>Charisma:</b> Looks, Wherewithal, Mental Prowess</li></ul>
+        <h3>Hit Protection and Armour</h3>
+        <p><b>hp</b> is better though of as <i>Hit Protection</i>, as it represents a characters ability to avoid taking damage while in combat situations.<br>
+        It is a quickly refreshing resource. You start with 1d6 hp and gain more from taking <a href="Combat.html#scarTable">scars</a>. It is refreshed after a fight by taking a 
+        ten minute breather.<br>
+        <b>Armour</b> is a number that spans 0 to 3.  Regular street clothes provides 0 armour, while a dragon or a set of powered armour would have 3 armour.<br>
+        Any damage taken is reduced by your armour value.<br>
+        Armour never goes above 3.</p>
+
+        <h3>Inventory</h3>
+        <p>A character can happily lug around ten slots worth of gear if they have the belt / bags / packs to carry it.<br>
+        A naked character can carry around something in each hand.  Having a belt provides two additional slots. A typical pack will allow up to six
+        more slots of encumbrance. Thus, a typical character will have <i><b>Two hands slots, Two belt slots, and six pack slots</b></i> available.<br>
+        <br>You can carry more, up to a maximum of fourteen slots of equipment, <b>but:</b></p>
+        <ul><li>Each slot over ten comes with a cumulative +1 penalty to STR and DEX saves you make.</li>
+            <li>If any PC is over the ten slot limit, the group's <a href="Ref_Facing.html#points">travel speed</a> is reduced for the day by roughly 6 miles (1 hex).</li></ul>
+        <p>Objects stowed away in your pack take one combat turn to retrieve and put to use.<br><br>
+        <b>Slots</b> are an abstract measure of weigh. Roughly speaking a 1 one-handed weapon is 1 slot.</p>
+        <ul style="margin-left: 10px;"><li>Tiny objects like rings or gems do not require as slot, so long as you have pockets or room in a pack.</li>
+            <li>Middleing objects take up one slot per 3 items (Torches, Rations, Stakes)</li>
+            <li>Larger objects can take up two or three slots (Plate Armour or Riot Shield: 2, picking up a small pig: 3</li>
+            <li>Unwieldly or over-large object are designated <b><i>Bulky (b)</i></b>.</li></ul>
+        <p>A character can carry two bulky items, but <b>having <i>a third bulky item reduces the character's hit protection to zero</i>.</b></p>
+
+        <h3>At Higher Levels</h3>
+        <p>Once a character gains a bit of <a href="Character.html#levelUp">experience</a>, they may also need to track:</p>
+        <ul style="margin-left: 10px;"><li><b>MD:</b> Magic Dice. You roll them to <a href="Magic.html">cast spells</a>. Don't get doubles.</li>
+            <li><b>Luck:</b> Spend it on others to allow them to <a href="#lucky">reroll</a> dice. Refreshes between sessions.</li>
+            <li><b>Class:</b> Get <a href="Classes.html">trained</a> to learn specific abilities.</li>
+            <li><b>Conditions:</b> Sometimes good, usually <a href="#conds">bad</a>.</li></ul>
+
+<h1>Making Saves</h1>
+<p>The bulk of checks made in this game come in the form of saves. You make a save when you are try to avoid the effects of something
+    bad happening to you.<br><br>
+    Make a save by rolling a d20 and comparing the result to your related ability.<br>
+    Rolling <b>on or under your ability score means success</b>, and you avoid the danger.<br><br>
+    Saves can get a bonus or penalty (from -4 to +4) depending on what is happening in the fiction. <br><br></p>
+
+    <div class="boxedText">
+        When you are attempting to accomplish a task, and you complete the trinity:</p>
+        <ul>
+            <li>You have time to spend on the action, and</li>
+            <li>You have the skills required to complete the task, and</li>
+            <li>You have the gear required to complete the task...</li>
+        </ul>
+        <p><b>&emsp;You don't have to roll!!</b> Your attempt just succeeds.<br><br>
+        However, if you are missing one leg of the trinity, that's when checks come into play.<br>
+        Asking lots of questions and acting on gathered information helps prevent rolling checks in the first place.</p>
+    </div>
+
+
+<h1>Getting Hurt</h1>
+<p>Weapon damage is centered on a d6 (sword), with a d12 (Cannon) representing the worst you can be hit with.<br>
+You start with d6 hit protection, and that maxes out at 3d6 sometime in the future. <b>Getting hit sucks.</b> Be careful.<br><br>
+When you take damage this is what happens:</p>
+<ol>
+    <li>If you have armour on, reduce the damage received by that amount.</li>
+    <li>If you have hp left, you will reduce your hp by the damage received.</li>
+    <ul>
+        <li>If you stop at exactly 0 hp: <b>Great!</b> You have gotten a <a href="Combat.html#scarTable">scar</a>, and may get more hp !</li>
+        <li>If you still have damage to remove after losing all of your hp:</li>
+        <ul><li>You will remove the remaining damage from your current Strength score.</li>
+            <li>Each time your Strength is reduced, you have to make a Strength Save to prevent <b>Critical Damage</b>.</li></ul>
+    </ul>
+    <li>Follow this exact process for taking Dexterity or Charisma damage as well.</li>
+    <li><b>If ever you hit 0 Strength, you are dead.</b> At 0 Dexterity you are paralyzed, and at 0 Charisma you are brain-dead.</li>
+</ol>
+<h3 id="critdmg">Critical Damage</h3><p>Critical Damage is a condition that means you are incapacitated for the remainder of the fight. You are knocked out, or 
+    yelling in pain or dazed... basically unable to act until you are tended to by an ally. If you are left un-attended for more than an hour, you
+    will die.
+</p>
+
+<h1>Rest and Recovery</h1>
+<p>Spending a <a href="Ref_Facing.html">turn</a> collecting yourself after a fight refreshes your hp though runs the risk of another encounter.<br>
+Spending a night somewhere safe refreshed 1 point of lost ability score.<br>Spending a night in a tent allows you to make a save to see if you 
+can regain 1 point.<br>
+Spending a full week somewhere safe refreshes all of your lost ability points.</p>
+
+<h1 id="conds">Conditions</h1>
+<p>Some good, most bad, all pretty easy to track.</p>
+<h3>Blast Damage</h3>
+<p>Damage with the Blast keyword (d6b) deals damage to each character in a zone.</p>
+<h3>Critical Damage</h3>
+<p>See above. Unable to act without aid and you will die within an hour if left alone.</p>
+<h3>Deprived</h3>
+<p>You are missing a critical need. Food, water or sleep. You are unable to benefit from resting.</p>
+<h3>Exhaustion</h3>
+<p>You lose access to one of your inventory slots. Exhaustion stacks. Getting a good night's rest clears all exhaustion.</p>
+<h3>Enhanced</h3>
+<p>Your attacks are particularly effective. Roll a bonus damage die along with your standard attack dice, taking the best result rolled.</p>
+<h3>Impaired</h3>
+<p>Your attacks are particularly ineffective. Roll only a d4 for the attack, with no bonus die allowed.</p>
+<h3>Prone</h3>
+<p>Getting knocked down carries a 50% chance of hitting your head and being dazed for d2 turns. (no attacking, Ed6 damage against you)</p>
+<h3>Well Rested and Very Well Rested</h3>
+<p>Make a Charisma Save to regain a second Ability point. Very gives you 2 automatically, and Saves for a third.</p>
+<h3>Well Fed and Very Well Fed</h3>
+<p>Make your <i>Well Rested</i> Save with -2 bonus, or a -4 bonus if Very Well Fed.</p>
+
+<h1 id="warbands">Warbands and Structural Damage</h1>
+<p>When enemies group up, they become a warband. Individual attacks against a warband are Impaired unless they deal Blast damage, while attacks from 
+    a warband to individuals is dealt enhanced Ed10. <br><br>
+    Individuals attacking structures deal Impaired damage.
+</p>
+
+<h1 id="lucky">Luck</h1>
+<p>Once you earn a small pool of luck, you can expend one of your luck points to have an ally reroll any die that you 'see' them roll.<br>
+The luck pool refreshes after each session, so burn them up.</p>
+    <p><br><br><a href="index.html">Return to Index</a><br><br></p>
+</body>
+</html>
