@@ -16,7 +16,12 @@
 
     // Fantasy Name Button controls
     const nameButton = document.getElementById('Fantasy Name');
-    const fantasyNameList = [ "Arguile", "Ahmen", "Horus" ];
+    const fantasyNameList = [ "Arguile", "Ahmen", "Horus", "Erik","Ghorm","Rhagar","Nixil","Quennin","Aerg","Agn","Arvant","Belum","Brint","Borda",
+                             "Daeru","Eldar","Felban","Gotven","Graft","Gritter","Haeru","Hargha","Harmug","Karg","Karva","Katla","Kaftan","Klort",
+                             "Kratar","Kutz","Kvetin","Lygan","Margar","Merkari","Nagl","Niduk","Nifehl","Prugl","Qillnach","Risten","Svind","Theras",
+                             "Therg","Torvul","Torn","Urm","Urvarg","Vagal","Vatan","Von","Vrakn","Vresi","Wemut","Dogar","Aenin","Avils","Corrin",
+                             "Karreth","Jon","Jennil","Herg","Lothan","Gulle","Georguy","Breda","Rewyn","Forde","Grichye","Thamond","Andres","Weke",
+                             "Hlafa"];
     function showRandomName() {
         const randomIndex = Math.floor( Math.random() * fantasyNameList.length );
         output.textContent = fantasyNameList[randomIndex]; }
@@ -25,7 +30,7 @@
 
     // Weather Button
     const weatherButton = document.getElementById( 'weather' );
-    const weatherList = [ "Clear", "Hazy", "Rainy", "Overcast" ];
+    const weatherList = [ "Clear", "Hazy", "Rainy", "Overcast","Downpour","Stifling","Beautiful","Pizzly" ];
     function showRandomWeather() {
         const randomIndex = Math.floor( Math.random() * weatherList.length );
         output.textContent = 'Today the weather is ' + weatherList[randomIndex]; }
