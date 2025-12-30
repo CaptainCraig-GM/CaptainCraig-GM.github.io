@@ -1,0 +1,106 @@
+body {
+    
+    background-image: linear-gradient( to bottom, #BCCEE3, #027cc3);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #F52780;
+    font-size: xx-large;
+    border-bottom: 2px solid #d6176a;
+    margin-bottom: 0;
+}
+h2 {
+    color: #F52780;
+    font-size: x-large;
+    margin-bottom: 0;
+}
+h3 {
+    font-size: medium;
+    color: white;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+p, ul, ol, a {
+    margin: 0;
+    padding-top: 0;
+    font-size: medium;
+    color: #474854;
+}
+
+ul, ol {
+    padding-left: 18px;
+}
+
+table {
+    margin-left: 10px;
+}
+
+table, th, td {
+    vertical-align: text-top;
+    padding: 5px;
+    font-size: medium;
+    color: #474854;
+    border: 1px solid darkslategray;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #94bcd4;
+}
+#special-table tr {
+    background-color: transparent;
+}
+
+th {
+    border: none;
+    color: white;
+}
+
+.column3 {
+    float: left;
+    width: 32%;
+    padding: 4px;
+}
+.column2 {
+    float: left;
+    width: 49%;
+    padding: 4px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.boxedText {
+    padding: 12px;
+    width: fit-content;
+    font-size: large;
+    color: #474854;
+    border: 2px solid darkslategray;
+    background-color: #50a6dc;
+}
+
+button {
+    background-color: #50a6dc;
+    border: none;
+    color: #474854;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 12px;
+}
+button:hover {
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.6);
+}
+
+#wl {
+    color: antiquewhite;
+}
+#ct{
+    text-align: center;
+}
