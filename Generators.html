@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+<h1>Random Generators</h1>
+
+<p id="output">Press a button to update.</p>
+<h1></h1>
+<p><br></p>
+
+<button id="Dungeon Room">Dungeon Room</button>
+<button id="Fantasy Name">Fantasy Name</button>
+<button id="Fantasy NPC">Fantasy NPC</button>
+<button id="Quest Spark">Quest Spark</button>
+<div style="padding-top: 1em;">
+    <button id="Travel Rates">Travel Rates</button>
+    <input type="text" id="myInput" value="30">
+</div>
+
+<script>
+    const output = document.getElementById('output');
+    output.setAttribute('style','white-space: pre;');
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max)
+    }
+
+
+    // Dungeon Room Generator
+    const dunRoomButton = document.getElementById('Dungeon Room');
+    function getDoor(roll) {
+        switch( roll ) {
+            case 1:
+                return "is locked.";
+            case 2:
+            case 3:
+                return "is stuck.";
+            default:
+                return "opens freely.";
+        }
+    }
+    function showRandomDungRoom() {
+        output.textContent = "The door " + getDoor(getRandomInt(6)) + "\r\nIt leads into a SIZE with EXITS" +
+            "\r\nThe room itself is STYLE, and contains CONTENTS" +
+            "\r\nThere are Monsters, Treasure and Secrets.";
+    }
+    dunRoomButton.addEventListener( 'click', showRandomDungRoom );
+
+
+    // Fantasy Name Button controls
+    const nameButton = document.getElementById('Fantasy Name');
+    const fantasyNameList = [ "Aerod","Amuhd","Beorrik","Caecil","Cael","Kevan","Kondor","Veric","Fynn","Kaius","Beor","Rian","Aellia","Aida",
+        "Belle","Dawn","Estelar","Harletta","Saena","Ayn","Arya","Celeste","Lirael","Sarien","Aegar","Aernid","Bhaest","Chaunce","Dunthessik",
+        "Orbryn","Rauk","Haldir","Xanthe","Dorindal","Galathilin","Aerig","Bellinka","Bo","Donearg","Chandrelle","Ivis","Rye","Syrrika","Elvina",
+        "Ilmare","Marelda","Maeve","Ahumest","Coeliat","Finlas","Galdir","Halbor","Virtheon","Maeve","Varda","Alarathor","Erevan","Faelivrin",
+        "Erevan","Aelloria","Beniea","Ceiloth","Floralei","Maeglin","Irune","Lathriel","Calantha","Auroriel","Ilmare","Lyra"];
+    function showRandomName() {
+        output.textContent = fantasyNameList[getRandomInt(fantasyNameList.length)]; }
+    //Add a listener
+    nameButton.addEventListener( 'click', showRandomName );
+
+
+
+    // Fantasy NPC get
+    const fNPCbutton = document.getElementById('Fantasy NPC');
+    const phyDetList = ["has blank eyes", "has bandages","has a bad shave","is so short","has tired eyes","wears clothing layers","is filthy","is beautiful",
+                        "is balding","has leisons", "is unkempt","looks brooding","has bulging eyes","looks super tidy","has a face scar","has a wild moustache",
+                        "has been maimed","is armoured","is under-clothed","has manic eyes","STINKS","is obese","is obviously foreign","is emaciated"];
+    const perList = ["Hurried","Panicked","So Calm","Smitten","UnTrusting","Obnoxious","Impatient","Demanding","Over Explanatory","OCD","Deceitful",
+                     "Foul-Mouthed","Lusty","Pushy","Grumpy","Repulsed","Cordial","Warm","Aloof","Confident","Dumb",
+                     "Greedy","Anxious","Not Listening"];
+    const motivList = ["impress a crush.","become rich.","impress a crush, you.","prove someone wrong.","get revenge on someone.",
+                        "be alone","rescue somebody/thing dear.","sate his/her curiousity.","best his/her rival.","clear his/her name.",
+                        "topple local authority.","roll again...but misinformed or bad intel."];
+    const interestList = ["a rarity (maybe valuable),","a magic item they own,","a magic item they want,","a legendary monster/hero,","a specific kind of food,",
+                        "an extremely in-accurate rumour,","a dangerous location/landmark,","a location no one has heard of,","a portent/omen,",
+                        "a home emergency. RIGHT NOW!!","a pet/species of animal,","a local custom/game,","the latest fad,","another NPC's activities,",
+                        "something the PCs posess,","a missing belonging,","yelling at another NPC about (reroll)",
+                        "gossiping to another NPC about (reroll), and they DO NOT want to be disturbed."];
+    const tagAlongList = ["Please let me join you.","No way I'm coming along!"];
+    function showRandomNPC() {
+        output.textContent = fantasyNameList[getRandomInt(fantasyNameList.length)] + " " +
+            phyDetList[getRandomInt(phyDetList.length)] + ", and behaves " + perList[getRandomInt(perList.length)] + ".\r\n" +
+            "He/she needs help with " + interestList[getRandomInt(interestList.length)] + " so he/she can " +
+            motivList[getRandomInt(motivList.length)] + ".\r\n" + tagAlongList[getRandomInt(tagAlongList.length)];}
+    fNPCbutton.addEventListener( 'click', showRandomNPC );
+
+
+    // Quest Button
+    const questSparkButton = document.getElementById('Quest Spark');
+    const quActionList = ["fight","protect","exterminate","scout","heist","navigate","escape","convince","coerce","negociate with","interrogate","locate","solve"];
+    const quObjectList = ["a monster","an NPC","a magical artifact","a mundane artifact","an object","a faction","a location in town","a location in wilds", "a dungeon"];
+    const quCompliList = ["monsters","traps","rivals","Illusions","Secrets","Faction","Environment","NPC conflict"];
+    const quConstrList = ["time","gear","Magic","help"];
+    function showQuestSpark() {
+        output.textContent = "You need to " + quActionList[getRandomInt(quActionList.length)] + " " + quObjectList[getRandomInt(quObjectList.length)] +
+             ". Expect lots of " + quCompliList[getRandomInt(quCompliList.length)] + ", and you'll be short on " + quConstrList[getRandomInt(quConstrList.length)] + ".";
+    }
+    questSparkButton.addEventListener('click',showQuestSpark );
+
+
+    // Convert Travel Rates Button
+    const getTravelRatesButton = document.getElementById('Travel Rates');
+    const travelInputTextBox = document.getElementById('myInput');
+    function roundNumber( numberToRound ){
+        return Math.round(numberToRound * 100) /100;
+    }
+    function calculateTravelDistances() {
+        let inputDistance = travelInputTextBox.value;
+        var distance = parseInt(inputDistance, 10);
+        output.textContent = "If the creature's speed is " + distance + ", It's adjusted speeds are as follows:\r\n" +
+            "mode       Normal      Arm/Ld.      Encumb.\r\n" +
+            "Combat:    " + distance + "             " + distance *.75 + "          " + distance*.5 +"\r\n" +
+            "Explore:   " + distance*12 + "             " + distance *9 + "          " + distance*6 +"\r\n" +
+            "Walking:   " + distance*24 + "             " + distance *18 + "          " + distance*12 +"\r\n" +
+            "Running: " + distance*36 + "             " + distance *27 + "          -\r\n" +
+            "     read as feet while indoors, or yards while outdoors.\r\n" +
+            "\r\nThe speed of " + distance +" drives this overland travel speed in miles:\r\n" +
+            "Terrain     /Hour    /Day     /Week\r\n" +
+            "Roads:        " + roundNumber(distance*.1) + "       " + distance + "        " + roundNumber(distance*7) + "\r\n" +
+            "Open:       " + roundNumber(distance*.07) + "       " + roundNumber(distance*.7) + "        " + roundNumber(distance*5) + "\r\n" +
+            "Desert:     " + roundNumber(distance*.05) + "       " + roundNumber(distance*.5) + "        " + roundNumber(distance*3.5) + "\r\n" +
+            "Forest:      " + roundNumber(distance*.05) + "       " + roundNumber(distance*.5) + "        " + roundNumber(distance*3.5) + "\r\n" +
+            "Swamp:     " + roundNumber(distance*.03) + "        " + roundNumber(distance*.3) + "        " + roundNumber(distance*2) + "\r\n" +
+            "Mountains: " + roundNumber(distance*.03) + "        " + roundNumber(distance*.3) + "        " + roundNumber(distance*2) + "\r\n";
+    }
+    getTravelRatesButton.addEventListener('click', calculateTravelDistances );
+    
+</script>
+
+<p><br><br><a href="index.html">Return to Index</a><br><br></p>
+</body>
+</html>

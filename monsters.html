@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="Style/style.css">
+
+</head>
+<body>
+<h1>Monster Creation</h1>
+<p>When creating a monster, or bringing in from another system, keep an eye on these guidelines:</p>
+<ul>
+   <li>Really get a feel for the monster. What makes them unique, and how to they affect the characters?</li>
+   <li>Get a picture of them in your head. What do they smell like?</li>
+</ul>
+<h3>Abilities</h3>
+<p>Creatures have the 3 base abilities, Strength, Dexterity, Charisma. Just like people, 10 is the average score.<br>
+15 is pretty damn good, while 6 is pretty crappy. They both top/bottom out at 18/3. Supernatural may hit 19 or 20.</p>
+
+<h3>hp and armour</h3>
+<p>How 'fight-ey' is the monster? Rough and tumble? 5hp. Tough as nails, or a boss? 8-12hp<br>
+Having more than 12 hp can turn the fight into a slog. <br>
+<br>Does it have a shield, or cool duds? 1a<br>
+Chain mail, or high speed? 2a<br>
+Is it literally made of armour? 3a</p>
+
+<h3>Damage</h3>
+<p>find a comfortable spot between a sword strike -d6, or naval artillery +d12<br>
+Can it hit a few people at once? give it burst damage for explosions, weapon sweeps, or machine guns.<br>
+Does it have multiple attacks, or can it attack twice in one turn? Give it a couple attack dice.<br>
+If it's a solo creature, let it hit two separate targets each round.</p>
+
+<h3>Quirks</h3>
+<p>Does it have a nasty finishing move? Make it happen on Critical Damage (<a href="Basics.html#critdmg">CD</a>)<br>
+Does it have special immunities or resistances? Make those damage sources Impaired, or completely ignored.<br>
+Does it have other weird quirks? Just make them happen in your description.<br>
+Default to not giving saves to prevent the nasty shit. Less chances for nothing happening.<br><br></p>
+
+<h1>Humanoid</h1>
+<p><b>Note:</b>desc.</p>
+
+<div class="row">
+<div class="column2">
+<h2>A</h2>
+
+<h3>Animated Armour</h3>
+<p>8hp3a &emsp; 14,8,3 &emsp; d6 weapon</p>
+<ul style>
+    <li id="aniA">NonMagical damage is Impaired</li>
+    <li id="aniB">oCD- Armour is ruined on Strength Critical Damage</li></ul>
+<button onclick="getAniArm()" style="margin-left: 2em; margin-top: -1em;">Get Armour</button>
+
+<h2>B</h2>
+
+<h3>Beholder</h3>
+<p>16hp &emsp; 14,13,16 &emsp; d8 beam 5x</p>
+<ul style>
+    <li id="behoA">Floaty- Hovers above a zone</li>
+    <li id="behoB">Beams- fire off 5 different elemental beams</li>
+    <li id="behoC">CD- Critical effect appropriate to beam damage</li></ul>
+<button onclick="getBeholder()" style="margin-left: 2em; margin-top: -1em;">Get Beholder</button>
+
+<h2>C</h2>
+<h3>Cyborg</h3>
+<p>8hp2a &emsp; 14,7,8 &emsp; d8 arm weapon</p>
+<ul style>
+    <li id="cybA">Ignore Critical Damage- Fight until 0 Str</li>
+    <li id="cybB">CD- Remove a limb</li></ul>
+<button onclick="getCyborg()" style="margin-left: 2em; margin-top: -1em;">Get Cyborg</button>
+
+<h2>G</h2>
+
+<h3>Giant</h3>
+<p>12hp1a &emsp; 15,9,9 &emsp; d8 weapon OR d6b sweep</p>
+<ul style>
+    <li id="giaA">One damage type is Impaired</li>
+    <li id="giaB">CD- d12 Str Dmg Bone Gnashing</li>
+    <li id="giaC">Heave boulder (d8) up to 300'</li></ul>
+<button onclick="getGiant()" style="margin-left: 2em; margin-top: -1em;">Get Giant</button>
+
+<h3>Gnoll</h3>
+<p>3hp &emsp; 11,11,8 &emsp; d6 weapon</p>
+<ul style>
+    <li id="gnoA">Ed6 damage if another gnoll nearby</li></ul>
+<button onclick="getGnoll()" style="margin-left: 2em; margin-top: -1em;">Get Gnoll</button>
+
+<h3>Gnome</h3>
+<p>6hp2a &emsp; 6,16,18 &emsp; d1 stone throw OR Glamour</p>
+<ul>
+   <li id="gnmA"> Glamours last until the gnome decides it doesn't.</li>
+   <li id="gnmB">Can teleport up to 30' at will.</li>
+   <li id="gnmC">Can turn invisible at will.</li></ul>
+<button onclick="getGnome()" style="margin-left: 2em; margin-top: -1em;">Get Gnome</button>
+
+<h3>Goblin</h3>
+<p>2hp &emsp; 8,14,7 &emsp; d4 weapon</p>
+<ul style>
+    <li id="gobA">Cowards- On friends CD flee and setup a trap</li></ul>
+<button onclick="getGoblin()" style="margin-left: 2em; margin-top: -1em;">Get Goblin</button>
+
+<h2>M</h2>
+<h3>Mind Flayer</h3>
+<p>10hp1a &emsp; 12,13,17 &emsp; d8 weapon</p>
+<ul style>
+    <li id="mflA">Weapon attack AND (Command OR Schlurp)</li>
+    <li id="mflB">Command- Cha save at +3 or DO IT</li>
+    <li id="mflC">Schlurp- fastens on first round then d12 Cha</li>  </ul>
+<button onclick="getMindF()" style="margin-left: 2em; margin-top: -1em;">Get Mind Flayer</button>
+
+</div>
+<div class="column2">
+<h2>N</h2>
+
+<h2>O</h2>
+
+<h3>Orc</h3>
+<p>8hp1a &emsp; 14,9,8 &emsp; d6 weapon 2x</p>
+<ul style>
+    <li id="orcA">Berserker- 2 targets each turn </li>
+    <li id="orcB">Tribal xenophobes and fierce warriors.</li>  </ul>
+<button onclick="getOrc()" style="margin-left: 2em; margin-top: -1em;">Get Orc</button>
+
+<h2>S</h2>
+
+<h3>Space-man</h3>
+<p>4hp2a &emsp; 10,8,10 &emsp; d6 heat ray</p>
+<ul><li id="spmA">Mirrored visor suit</li>
+    <li id="spmB">Horribly disfigured inside</li>  </ul>
+<button onclick="getSpaceM()" style="margin-left: 2em; margin-top: -1em;">Get Space-man</button>
+
+</div>
+</div>
+
+
+<h1>Beasts</h1>
+<p><b>Note:</b>desc.</p>
+
+<div class="row">
+<div class="column2">
+<h2>A</h2>
+<h2>B</h2>
+
+<h3>Basilisk</h3>
+<p>10hp2a &emsp; 14,12,8 &emsp; d8 bite, d6b swipe</p>
+<ul style>
+    <li id="basiA">Bite AND (Stare OR d6b Tail Swipe)</li>
+    <li id="basiB">Bite attack inflicts poison</li>
+    <li id="basiC">Stare attack hardens then petrifies</li></ul>
+<button onclick="getBasilisk()" style="margin-left: 2em; margin-top: -1em;">Get Basilisk</button>
+
+<h3>Bear (Grizzly)</h3>
+<p>6hp1a &emsp; 16,12,6 &emsp; 2d8 Swipes</p>
+<ul style>
+   <li id="bearA">CD- Rend for d8 Str Dmg</li></ul>
+<button onclick="getBear()" style="margin-left: 2em; margin-top: -1em;">Get Bear</button>
+
+<h3>Boar</h3>
+<p>4hp1a &emsp; 13,12,6 &emsp; d6 gore</p>
+<ul style>
+   <li id="boarA">Ed6 when charging from different zone</li></ul>
+<button onclick="getBoar()" style="margin-left: 2em; margin-top: -1em;">Get Boar</button>
+
+<h2>C</h2>
+<h3>Cat (Apex)</h3>
+<p>8hp2a &emsp; 14,16,9 &emsp; 2d6 claws OR d8 bite 5x</p>
+<ul style>
+   <li id="catA">Ed8 if biting from hidden leap</li>
+   <li id="catB">CD- d8 Dex Dmg from rip and tear</li></ul>
+<button onclick="getCat()" style="margin-left: 2em; margin-top: -1em;">Get Cat</button>
+
+<h2>D</h2>
+<h3>Dog</h3>
+<p>1hp &emsp; 10,12,10 &emsp; d4 bite</p>
+<ul style>
+   <li id="dogA">oCD- d12 Cha damage if your dog dies</li></ul>
+<button onclick="getDog()" style="margin-left: 2em; margin-top: -1em;">Get Dog</button>
+
+<h3>Dog (Blink)</h3>
+<p>3hp &emsp; 8,12,10 &emsp; d4 bite</p>
+<ul style>
+    <li id="bnkA">Teleport 1 zone at will</li>
+    <li id="bnkB">oCD- d12 Cha Dmg if your dog dies</li> </ul>
+<button onclick="getBlink()" style="margin-left: 2em; margin-top: -1em;">Get Blink</button>
+
+<h3>Dog (Hound)</h3>
+<p>5hp &emsp; 9,11,10 &emsp; d6 bite or restrain</p>
+<ul style>
+   <li id="hndA">oCD- d12 Cha damage if your dog dies</li></ul>
+<button onclick="getHound()" style="margin-left: 2em; margin-top: -1em;">Get Hound</button>
+
+<h3>Donkey</h3>
+<p>1hp &emsp; 14,8,6 &emsp; d4 bite</p>
+<ul><li id="dkyA">Slots 25(50)</li>  </ul>
+<button onclick="getDonkey()" style="margin-left: 2em; margin-top: -1em;">Get Donkey</button>
+
+<h3>Dragon (Adult)</h3>
+<p>16hp3a &emsp; 18,15,17 &emsp; d12 bite OR d10b tail</p>
+<ul style>
+    <li id="drgA">NonMagical damage ignored</li>
+    <li id="drgB">Immune to 'same type' damage - Ed8 from opposite</li>
+    <li id="drgC">Breath does 2d12b to one zone (two if airborne)</li>
+    <li id="drgD">CD- Eat- On a bite atk you are eaten gear and all</li>
+    <li id="drgE">CD- Breath- Appropriate to damage type</li> </ul>
+<button onclick="getDragon()" style="margin-left: 2em; margin-top: -1em;">Get Dragon</button>
+
+<h3>Dragon (Smol)</h3>
+<p>12hp3a &emsp; 15,16,14 &emsp; d8 bite</p>
+<ul style>
+    <li id="smoA">NonMagical damage ignored</li>
+    <li id="smoB">Immune to 'same type' damage - Ed8 from opposite</li>
+    <li id="smoC">Breath does 2d8b to one zone</li>
+    <li id="smoD">Too Cute to attack</li> </ul>
+<button onclick="getSmol()" style="margin-left: 2em; margin-top: -1em;">Get Smol</button>
+
+<h2>G</h2>
+
+<h3>Gelatinous Cube</h3>
+<p>8hp &emsp; 7,18,4 &emsp; d8b dissolve</p>
+<ul style>
+    <li id="cubA">d8 dex damage to any imbedded</li>
+    <li id="cubB">Acid- melee weapons downgrade atk die size</li>    </ul>
+<button onclick="getCube()" style="margin-left: 2em; margin-top: -1em;">Get Cube</button>
+
+<h2>H</h2>
+<h3>Hippogriff</h3>
+<p>8hp1a &emsp; 14,14,8 &emsp; d6b rend</p>
+<ul style>
+    <li id="hpgA">Can fly</li>
+    <li id="hpgB">25(35) slots but no flight if encumbered</ul>
+<button onclick="getHippog()" style="margin-left: 2em; margin-top: -1em;">Get Hippogriff</button>
+
+<h3>Horse</h3>
+<p>2hp &emsp; 13,13,7 &emsp; d4 bite</p>
+<ul><li id="hseA">Slots 30(40)</li>  </ul>
+<button onclick="getHorse()" style="margin-left: 2em; margin-top: -1em;">Get Horse</button>
+
+<h3>Horse (War)</h3>
+<p>8hp &emsp; 15,10,9 &emsp; d6 kick</p>
+<ul><li id="whsA">d6 bite OR d6 kick</li>
+   <li id="whsB">Slots 20(30)</li>  </ul>
+<button onclick="getWaHrs()" style="margin-left: 2em; margin-top: -1em;">Get Warhorse</button>
+
+<h2>M</h2>
+
+<h3>Manticore</h3>
+<p>7hp1a &emsp; 12,12,9 &emsp; d6 claws, d6 bite, d4b spike </p>
+<ul><li id="mtcA">2 Claw attacks AND (Bite OR Spike)</li>
+   <li id="mtcB">Tail spikes also inflict poison</li>
+   <li id="mtcC">Man Faced and Can fly about</li>  </ul>
+<button onclick="getManties()" style="margin-left: 2em; margin-top: -1em;">Get Manticore</button>
+
+<h3>Medusa</h3>
+<p>8hp &emsp; 10,8,15 &emsp; d6 bite</p>
+<ul><li id="medA">d6 snake bites AND petrify</li>
+   <li id="medB">Snake bites inflict poison</li>
+   <li id="medC">Any not averting eyes harden then petrify</li>
+   <li id="medD">Averting eyes impairs damage</li>  </ul>
+<button onclick="getMedusa()" style="margin-left: 2em; margin-top: -1em;">Get Medusa</button>
+
+<h3>Minotaur</h3>
+<p>8hp &emsp; 16,9,12 &emsp; 2d6 gore, d8 weapon</p>
+<ul><li id="minA">d8 weapon Or (d6 gore AND d6 Bite)</li>
+   <li id="minB">CD d8 trample</li>  </ul>
+<button onclick="getMino()" style="margin-left: 2em; margin-top: -1em;">Get Minotaur</button>
+
+</div>
+<div class="column2">
+<h2>N</h2>
+<h2>O</h2>
+
+<h3>Owlbear</h3>
+<p>10hp &emsp; 16,12,9 &emsp; 2d6 claws, d6 beak</p>
+<ul style>
+    <li id="owbA">2x claw attack AND d6 beak</li>
+    <li id="owbB">CD- d10 Str Dmg rending</li>  </ul>
+<button onclick="getOwlB()" style="margin-left: 2em; margin-top: -1em;">Get Owlbear</button>
+
+<h2>R</h2>
+
+<h3>Rust Monster</h3>
+<p>8hp2a &emsp; 8,12,6 &emsp; d6 bite</p>
+<ul><li id="rmoA">Melee attacks downgrade the attackers Dmg die</li>
+    <li id="rmoB">Damage degrades worn armour by 1</li> </ul>
+<button onclick="getRusty()" style="margin-left: 2em; margin-top: -1em;">Get Rust Monster</button>
+
+<h2>S</h2>
+
+<h3>Salamander</h3>
+<p>10hp1a &emsp; 12,13,8 &emsp; 2d4 claws, d6 bite</p>
+<ul><li id="salaA">Hot- d4 fire damage to all in zone</li>
+   <li id="salaB">Only magical damage</li>
+   <li id="salaC">Immune to fire damage</li>  </ul>
+<button onclick="getSalam()" style="margin-left: 2em; margin-top: -1em;">Get Salamander</button>
+
+<h3>Spider (huge)</h3>
+<p>3hp1a &emsp; 8,14,6 &emsp; d6 bite</p>
+<ul><li id="spdA">Bite injects poison</li>
+    <li id="spdB">CD- All webbed up until freed</li>  </ul>
+<button onclick="getSpider()" style="margin-left: 2em; margin-top: -1em;">Get Spider</button>
+
+<h2>T</h2>
+
+<h3>Toad (Giant)</h3>
+<p>7hp &emsp; 11,13,6 &emsp; d6b crush</p>
+<ul><li id="toadA">d6b Crush OR Swallow</li>
+   <li id="toadB">Those swallowed take d4 digest and crush damage also</li>
+   <li id="toadC">oCD- Throws up anything in guts</li>  </ul>
+<button onclick="getToad()" style="margin-left: 2em; margin-top: -1em;">Get Toad</button>
+
+<h3>Troll</h3>
+<p>8hp &emsp; 12,11,7 &emsp; d8 rake</p>
+<ul><li id="trlA">Regain d6 hp each turn not burning</li>
+    <li id="trlB">CD- d10 Str Dmg pummelling</li>
+    <li id="trlC">oCD- pieces not burnt regrow new trolls</li>  </ul>
+<button onclick="getTroll()" style="margin-left: 2em; margin-top: -1em;">Get Troll</button>
+
+<h2>W</h2>
+<h3>Wolf</h3>
+<p>4hp &emsp; 12,15,7 &emsp; d6 bite</p>
+<ul><li id="wlfA">Ed6 if attacking as pack</li></ul>
+<button onclick="getWolf()" style="margin-left: 2em; margin-top: -1em;">Get Wolf</button>
+
+<h3>Wyvern</h3>
+<p>10hp2a &emsp; 15,9,7 &emsp; d10 bite or d6 tail swipe</p>
+<ul><li id="wyvA">Flies around like an asshole</li>
+    <li id="wyvB">Tail swipe inflicts Poison</li> </ul>
+<button onclick="getWyvern()" style="margin-left: 2em; margin-top: -1em;">Get Wyvern</button>
+
+</div>
+</div>
+
+<h1>Demon</h1>
+<p><b>Outsiders:</b>Killing a demon returns it to it's underworld realm, banishing them for d10 x 10 years.</p>
+
+<h1>Undead</h1>
+<p><b>Cold Aura:</b> it's always freezing around them.<br>
+   <b>Tomb Silence:</b> Undead make no noise until they attack.<br>
+   <b>Immunities:</b> immune to Poisons, Charms, Holds and Sleep.</p>
+
+<div class="row">
+<div class="column2">
+<h2>A</h2>
+
+<h2>G</h2>
+<h3>Ghost</h3>
+<p>*hp &emsp; 3,3,3 &emsp; d4 touch</p>
+<ul style>
+    <li id="ghoA">Drain- [Dmg] levels of exhaustion until Magically Healed</li>
+    <li id="ghoB">Etherial- can't hurt- release with fiction</li>    </ul>
+<button onclick="getGhost()" style="margin-left: 2em; margin-top: -1em;">Get Ghost</button>
+
+<h3>Ghoul</h3>
+<p>8hp &emsp; 13,15,6 &emsp; 2d8 claws</p>
+<ul style>
+    <li id="ghlA">1st attack paralyzes for d3-1 rounds</li>
+    <li id="ghlB">CD- Feast- d8 Str damage</li>    </ul>
+<button onclick="getGhoul()" style="margin-left: 2em; margin-top: -1em;">Get Ghoul</button>
+
+<h2>L</h2>
+<h3>Litch</h3>
+<p>12hp2a &emsp; 12,8,17 &emsp; d8 touch</p>
+<ul style>
+    <li id="litA">Touch AND (Spell OR Paralyze)</li>
+    <li id="litB">12 MD- Lots of spells</li>
+    <li id="litC">NonMagical Immunity</li>
+    <li id="litD">Cold Lightning Necrotic damage Impaired</li>
+    <li id="litE">Invincible while phylactery is intact</li>
+    <li id="litF">Drain- [Dmg] levels of exhaustion until Magically Healed</li>  </ul>
+<button onclick="getLitch()" style="margin-left: 2em; margin-top: -1em;">Get Litch</button>
+
+<h2>M</h2>
+
+<h3>Mummy</h3>
+<p>18hp &emsp; 16,7,8 &emsp; d8 fists</p>
+<ul style>
+    <li id="mumA">NonMagical attacks Impaired</li>
+    <li id="mumB">Slow- turn + action to move nearby</li>
+    <li id="mumC">CD- d4 Cha Dmg each night Mummy Rot until magically healed</li>  </ul>
+<button onclick="getMummy()" style="margin-left: 2em; margin-top: -1em;">Get Mummy</button>
+
+</div>
+<div class="column2">
+
+<h2>S</h2>
+
+<h3>Skelly</h3>
+<p>5hp2a &emsp; 8,8,5 &emsp; d6 weapon</p>
+<ul style>
+    <li id="skeA">Blunt damage deals Ed6</li>
+    <li id="skeB">All other NonMagical damage is Impaired</li></ul>
+<button onclick="getSkelly()" style="margin-left: 2em; margin-top: -1em;">Get Skeleton</button>
+
+<h2>V</h2>
+
+<h3>Vampire</h3>
+<p>14hp2a &emsp; 17,16,17 &emsp; d10 weapon</p>
+<ul style>
+    <li id="vampA">Regenerate d4 hp per turn</li>
+    <li id="vampB">Turn into bats-fog-rats at will</li>
+    <li id="vampC">CD- Drain- Grab hold then d10 Str each turn</li>
+    <li id="vampD">oCD- Turn into bats-rats-fog to escape</li></ul>
+<button onclick="getVampire()" style="margin-left: 2em; margin-top: -1em;">Get Vampire</button>
+
+<h3>Vamp Spawn</h3>
+<p>6hp1a &emsp; 14,16,8 &emsp; d6 weapon or d8 bite</p>
+<ul><li id="vmspA">CD- latch on for Ed8 Str damage</li>
+    <li id="vmspB">Turn into rats-fog at will</li></ul>
+<button onclick="getVamSpwn()" style="margin-left: 2em; margin-top: -1em;">Get Vamp.Spawn</button>
+
+
+<h2>W</h2>
+
+<h3>Wraith</h3>
+<p>7hp2a &emsp; 7,16,13 &emsp; d6 touch AND drain</p>
+<ul style>
+    <li id="wraA">Only harmed by Magic or Silvered Weapons</li>
+    <li id="wraB">Silvered Weapons' damage is Impaired</li>
+    <li id="wraC">Drain- [Dmg] levels of exhaustion until Magically Healed</li></ul>
+<button onclick="getWraith()" style="margin-left: 2em; margin-top: -1em;">Get Wraith</button>
+
+<h2>Z</h2>
+
+<h3>Zomboid</h3>
+<p>10hp &emsp; 12,6,3 &emsp; d4 bite</p>
+<ul style>
+    <li id="zomA">Slow- turn + action to move nearby</li>
+    <li id="zomB">Magical damage is Ed8</li>
+    <li id="zomC">All other damage is Impaired</li>
+    <li id="zomD">oCD- Ignore critical damage then die at 0 str</li>
+    <li id="zomE">CD- Diseased- turn into a zomboid in d6 days</li></ul>
+<button onclick="getZombo()" style="margin-left: 2em; margin-top: -1em;">Get Zombo</button>
+</div>
+</div>
+
+
+<h1>From MARS !!!</h1>
+<p><b>Desert Dweller:</b> Tough to do things outside of the desert.<br>
+   <b>Conservative:</b> Needs half as much water in a day.</p>
+<div class="row">
+   <div class="column2">
+   
+<h3>Apes !</h3>
+<p>6hp1a &emsp; 15,12,10 &emsp; d6 pummel</p>
+<ul><li id="marApeA">Huge Gorilla Apes- shaggy hunkering warriors.</li>
+    <li id="marApeB">White normal and Blue can reason</li>
+    <li id="marApeC">Blue has clothes armour and weapons.</li>  </ul>
+<button onclick="getMarApe()" style="margin-left: 2em; margin-top: -1em;">Get Apes</button>
+
+
+<h3>Banth</h3>
+<p>12hp1a &emsp; 17 16 13 &emsp; 3d6 claws and d8 bite</p>
+<ul><li id="banthA">Ten legged monstrous lions.</li>
+    <li id="banthB">CD= Flee with body.</li>  </ul>
+<button onclick="getBanth()" style="margin-left: 2em; margin-top: -1em;">Get Banth</button>
+
+<h3>Jawas</h3>
+<p>3hp1a &emsp; 8 12 8 &emsp; by weapon</p>
+<ul><li id="jawaA">Little Star-Wars dudes</li>
+    <li id="jawaB">stubby balls of fabric and space goggles</li>
+    <li id="jawaC">oCD= Body 'poofs' away like Obi-wan</li>  </ul>
+<button onclick="getJawa()" style="margin-left: 2em; margin-top: -1em;">Get Jawa</button>
+   </div>
+   <div class="column2">
+
+<h3>Sith</h3>
+<p>huge hornet monstrosities</p>
+
+<h3>Vallot</h3>
+<p>10 legged, frog headed dogs (tusked)</p>
+
+<h3>Verg</h3>
+<p>shaggy yaks, tall haunches</p>
+
+   </div>
+</div>
+
+
+
+<h3>Basilisk</h3>
+<p>14hp2a &emsp; 16 11 13 &emsp d8 tail and gaze OR d8b frenzy OR d10 Charge</p>
+<ul><li id="bslkA">Horse sized eight legged lizard. Flat crocodile head.</li>
+    <li id="bslkB">A Glance makes PC's limbs sluggish.</li>
+    <li id="bslkC">Staring prompts a CHA Save (1st turn immobolized. 2nd turn petrified)</li>
+    <li id="bslkD">Charging a petrified character shatters them immediately.</li>
+    <li id="bslkE">Close zone in the sun - nearby only in darkness.</li>    </ul>
+
+<h3>Centaur</h3>
+<p>7hp1a &emsp; 14 14 13 &emsp; d6 hooves OR weapon</p>
+<ul><li id="cntrA">Man-Horse Combo. Small pacifist communites.</li>
+    <li id="cntrB">Bows and clubs. Hide / Bark armour.</li>    </ul>
+
+<h3>Chimera</h3>
+<p>24hp &emsp; 12 14 10 &emsp; d8 attack, 50% breath</p>
+<ul><li id="cmraA">Three deadly creatures stitched together magically.</li>
+    <li id="cmraB">Each round each creature can attack for d8 damage</li>
+    <li id="cmraC">50% chance one attack is a breath weapon. Dmg Type as appropriate.</li>     </ul>
+
+<h3>Cocatrice</h3>
+<p>8hp &emsp; 8 14 7 &emsp; d8 peck</p>
+<ul><li id="ctriA">Frilly chicken with snake neck and tail, bright feathers and loping eyes.</li>
+    <li id="ctriB">Flying and comically uninteligent (think hey-hey from Moana)</li>
+    <li id="ctriC">Touch begins to petrify immediately, with skin forming thin layer of stone.</li>
+    <li id="ctriE">Spending next turn scraping off stone with a tool can prevent petrification.</li>    </ul>
+
+<h3>Dryad</h3>
+<p>4hp &emsp; 9 14 16 &emsp; Charm</p>
+<ul><li id="drydA">Physically attractive tree sprites. Interested in attractive or funny guests.</li>
+    <li id="drydB">Powerfull charm spell with save made at +4.</li>
+    <li id="drydC">Failing check means treating Dryad as a good friend for 1 week.</li>
+    <li id="drydD">Those pulled into a Dryad's tree remain for exactly one year.</li>    </ul>
+
+<h3>Djinn</h3>
+<p>14hp2a &emsp; 17 15 16 &emsp; d10 attack or d8b area</p>
+<ul><li id="djnA">Muscular flying giants which can create real illusions at will.</li>
+    <li id="djnB">Length of illusion is tied to complexity. Metal Contraption lasts a day or two.</li>
+    <li id="djnC">Enemies of the Efreet.</li>     </ul>
+
+<h3>Dwarf</h3>
+<p>6hp1a &emsp; 14 8 11 &emsp; d6 weapon</p>
+<ul><li id="dwvA">Stubby Brawlers. Reclusive and asexually alien.</li>
+    <li id="dwvB">+Ed10 fighting giant types.</li>
+    <li id="dwvC">Will attack Elves on sight</li>
+    <li id="dwvD">DONT USE A SCOTTISH ACCENT. Clipped sentances</li>    </ul>
+
+<h3>Efreet</h3>
+<p>15hp1a &emsp; 17 16 14 &emsp; d10 attack or d8b area</p>
+<ul><li id="efrtA">Angry red Djinn. Aspect of fire. Wall of Fire at will.</li>
+    <li id="efrtB">At will illusions tied to complexity.</li>
+    <li id="efrtC">Will attack Djinn on sight.</li>
+    <li id="efrtD">CD= snap fingers and ignite body for d6 ongoing fire.</li>   </ul>
+
+<h3>Elf</h3>
+<p>7hp1a &emsp; 12 15 14 &emsp; d8 weapon</p>
+<ul><li id="elfA">Physically striking. Maybe beautiful but usually 'off'.</li>
+    <li id="elfB">Fine armour and weapons (noble).</li>
+    <li id="elfC">Haughty and aloof. Mortals are seldom worth any attention.</li>
+    <li id="elfD">Alien desires, will ALWAYS take advantage of PCs.</li>    </ul>
+
+<h3>Giants</h3><p>
+ <b>Hill:</b> 9hp1a &emsp; 16 8 6 &emsp; d8 weapon or d6b sweep<br>
+ <b>Fire:</b> 12hp1a &emsp; 16 10 10 &emsp; d8 weapon or d6b sweep<br>
+<b>Frost:</b> 14hp1a &emsp; 17 12 12 &emsp; d10 weapon or d8b sweep<br>
+<b>Cloud:</b> 16hp2a &emsp; 17 14 14 &emsp; d10 weapon or d8b sweep<br>
+<b>Storm:</b> 24hp3a &emsp; 18 14 16 &emsp; d10 weapon OR d8b sweep</p>
+<ul><li id="gntA">Can heave stones up to 3 zones away. Dex Save or d10+Ed8 bldg damage.</li>
+    <li id="gntB">Hill Giants are extremely dumb.</li>
+    <li id="gntC">Fire/Frost Giants are immune to fire/cold dmg.</li>
+    <li id="gntD">Cloud Giants have a very keen sense of smell.</li>
+    <li id="gntE">Storm Giants lightning/cold immune. Magic items</li>
+    <li id="gntF">Cloud/Storm Giants immune to non-magical attacks</li> </ul>
+
+<h3>Gnoll</h3>
+<p>4hp &emsp; 11 13 7 &emsp; d6 weapon</p>
+<ul><li id="gnllA">Dog-faced pack warriors. Small roving bands.</li>
+    <li id="gnllB">Clever pack fighters. +Ed6 per ally in same zone.</li>
+    <li id="gnllC">Retreat and regroup if battle going poorly.</li>
+    <li id="gnllD">CD= face bite d8 Cha dmg + nasty scar</li>   </ul>
+
+<h3>Goblin</h3>
+<p>3hp &emsp; 8 14 7 &emsp; d4 weapon</p>
+<ul><li id="gblnA">Cowardly little trap makers. Adorable when threatened.</li>
+    <li id="gblnB">On ally's CD= retreat and setup a trap.</li>
+    <li id="gblnC">Fight Dwarves on sight. Use goofy fun weapons/tools.</li>
+    <li id="gblnD">Impaired damage when in daylight.</li> </ul>
+
+<h3>Gorgon</h3>
+<p>10hp3a &emsp; 16 10 9 &emsp; d8 gore OR d10 charge</p>
+<ul><li id="ggnA">Large steel plated oxen with fire eyes.</li>
+    <li id="ggnB">Smoky black breath petrifies d4 creatures (same zone).</li>
+    <li id="ggnC">Cha Save or immobolized > petrified</li>    </ul>
+
+<h3>Griffon</h3>
+<p>8hp &emsp; 14 14 9 &emsp; d8 maul</p>
+<ul><li id="gffnA">Eagle head/wings/forelegs with lion tors/hindlegs/tail.</li>
+    <li id="gffnB">Fiercly carniverous. Check morale often as mount to resist</li>
+    <li id="gffnC">killing and eating other mounts.</li>    </ul>
+
+<h3>Hobgoblin</h3>
+<p>8hp1a &emsp; 14 10 9 &emsp; d6 weapon</p>
+<ul><li id="hbgnA">Bigger Goblins, tougher warriors.</li>
+    <li id="hbgnB">+2 dmg for each Goblin / Hobgoblin in same zone.</li></ul>
+
+<h3>Hippogriff</h3>
+<p>7hp &emsp; 16 12 8 &emsp; d6 beak</p>
+<ul><li id="hpogA">like griffon but horse in place of lion.</li>
+    <li id="hpogB">Solitary creatures</li></ul>
+
+<h3>Hydra</h3>
+<p>10hp1a &emsp; 16 11 7 &emsp; d6b per group of heads</p>
+<ul><li id="hydrA">STR is split into several heads.</li></ul>
+
+<p>
+Hydra- Many headed snake. split str into how many heads...
+
+Lycanthrope:
+  Wolf
+  Boar
+  Tiger
+  Bear
+Manticore- man faced lions. Dragon wings. tail spikes. man eaters
+Medusae- stone look, poison snakes. immune to poison
+Men:
+  Berserkers-
+  Mermen- Bad on land. Seahorse riding berserkers
+Minotaur- Bull headed man eater. No morale checks. Charge attack
+Nixie- Water Sprites. Lure beneath to enslave for 1 year. Summon fish to fight.
+Oozes:
+  Ochre Jelly- weak fire/cold. otherwise they split
+  Black Pudding- immune cold, weak fire. others split. Dissolve wood, metal, flesh. wall walker
+  Green Slime- weak fire/cold. Immune weapons. eats wood, metal. Turns flesh to green slime
+  Gray Ooze- No cold/fire. lightning +Ed6 and slashing +Ed4. rest impaired. Corrodes metal, flesh.
+  Yellow Mold- Fire +Ed8. immune rest. Melts wood and flesh only. Spores flood zone, save or die.
+
+Ogre- Tall, lots of hp. carry cash
+Pegasi- winged horses. Shy (only lawful)
+Pixie- invisible trouble makers. Can cast curses at will. Odd requests.
+Purple Worm- Small to HUGE. Poison sting. Swallow attack. Treats in belly
+Roc- large to HUGE birds of prey. Swoop and carry off. Drop
+Treant- command woodlands. Aloof.
+Troll- thin an rubbery, talons and fangs. Eternally Ravenous.  Regenerate d6 a turn if not burnt/acid.
+Unicorn- Only maiden may mount. Immune to magic. Dimension door at will
+Wyvern- poisons sting, bite, claw.
+
+<p>
+
+
+
+
+
+
+
+
+</p>
+
+
+<!--
+
+<h3>Manticore</h3>
+<p>7hp1a &emsp; 12,12,9 &emsp; d6 claws, d6 bite, d4b spike </p>
+<ul><li id="mtcA">2 Claw attacks AND (Bite OR Spike)</li>
+   <li id="mtcB">Tail spikes also inflict poison</li>
+   <li id="mtcC">Man Faced and Can fly about</li>  </ul>
+<button onclick="getManties()" style="margin-left: 2em; margin-top: -1em;">Get Manticore</button>
+
+function getManties() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('mtcA').innerText
+  let tagB = document.getElementById('mtcB').innerText
+  let tagC = document.getElementById('mtcC').innerText
+  let fullDesc = "Manticore," + descriptor + ",7,1,12,12,9,2,d6 var,d4b spike,"
+            + tagA + "," + tagB + "," + tagC
+  navigator.clipboard.writeText( fullDesc );     }
+
+-->
+
+
+
+<script>
+const humanAdjList = ['scrawny','fat','tattoos','handsome','arm off','teeth','HAT','metals','lanky',
+                   'leer','lazy eye','spikes','dirty','beard','tall','short','gruff','fancy','scarred',
+                   'ugly','blinky','nearsighted','relaxed','twitchy','adorable','ugly','henna','sweaty',
+                   'toothy','ear','piercings','warpaint','religious','glasses','tall hat','face cover',
+                   'stains'];
+
+const animaAdjList = ['scarred','wounded','filthy','hairy','limps','mangy','stuck','albino','beefy',
+                   'scrawny','bent','collar','toothy','singed','starved','burned','patchy','spotted',
+                   'striped','bald spots','pale','crouched','matted','one eyed','battle wound',
+                   'mottled','tall','stunted','starved','fat','disfigured','cute'];
+
+
+
+function getAniArm() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('aniA').innerText
+   let tagB = document.getElementById('aniB').innerText
+   let fullDesc = "Animated Armour," + descriptor + ",8,3,14,8,3,1,d6 weapon," + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getMarApe() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('marApeA').innerText
+   let tagB = document.getElementById('marApeB').innerText
+   let tagC = document.getElementById('marApeC').innerText
+   let fullDesc = "Great Ape," + descriptor + "6,1,15,12,10,1,d6 pummel,"
+                  + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );   }
+
+function getBanth() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('banthA').innerText
+  let tagB = document.getElementById('banthB').innerText
+  let fullDesc = "Banth," + descriptor + ",12,1,17,16,13,2,d6 3x claws,d8 bite,"
+            + tagA + "," + tagB
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getBasilisk() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('basiA').innerText
+   let tagB = document.getElementById('basiB').innerText
+   let tagC = document.getElementById('basiC').innerText
+   let fullDesc = "Basilisk," + descriptor + ",10,2,14,12,8,2,d8 bite,d6b swipe,"
+   + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getBear() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById( 'bearA').innerText
+   let fullDesc = "Bear," + descriptor + ",6,1,16,12,6,1,d8 Swipes 2x," + tagA
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getBeholder() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById( 'behoA').innerText
+   let tagB = document.getElementById( 'behoB').innerText
+   let tagC = document.getElementById( 'behoC').innerText
+   let fullDesc = "Beholder," + descriptor + ",16,0,14,13,16,1,d8 beam 5x," + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getBlink() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('bnkA').innerText
+   let tagB = document.getElementById('bnkB').innerText
+   let fullDesc = "Blink Dog," + descriptor + ",3,0,8,12,10,1,d4 bite," + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getBoar() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('boarA').innerText
+   let fullDesc = "Boar," + descriptor + ",4,1,13,12,6,1,d6 gore," + tagA
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getCat() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById( 'catA').innerText
+   let tagB = document.getElementById( 'catB').innerText
+   let fullDesc = "Cat," + descriptor + ",8,2,14,16,9,2,d6 claws 2x,d8 bite," + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getCube() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('cubA').innerText
+   let tagB = document.getElementById('cubB').innerText
+   let fullDesc = "Gel Cube," + descriptor + ",8,0,7,18,4,1,d8b dissolve," + tagA
+        + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getCyborg() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById( 'cybA').innerText
+   let tagB = document.getElementById( 'cybB').innerText
+   let fullDesc = "Cyborg," + descriptor + ",8,2,14,7,8,1,d8 arm weapon," + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getDog() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById( 'dogA').innerText
+   let fullDesc = "Doggo," + descriptor + ",3,0,8,12,10,1,d4 bite," + tagA
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getDonkey() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('dkyA').innerText
+  let fullDesc = "Donkey," + descriptor + ",1,0,14,8,6,1,d4 bite,"
+            + tagA
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getDragon() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('drgA').innerText
+   let tagB = document.getElementById('drgB').innerText
+   let tagC = document.getElementById('drgC').innerText
+   let tagD = document.getElementById('drgD').innerText
+   let tagE = document.getElementById('drgE').innerText
+   let fullDesc = "Adult Dragon," + descriptor + ",16,3,18,15,17,2,d12 bite,d10b tail," + tagA
+        + "," + tagB + "," + tagC + "," + tagD + "," + tagE
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getGhost() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('ghoA').innerText
+   let tagB = document.getElementById('ghoB').innerText
+   let fullDesc = "Ghost," + descriptor + ",1,0,3,3,3,1,d4 touch," + tagA
+        + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getGhoul() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('ghlA').innerText
+   let tagB = document.getElementById('ghlB').innerText
+   let fullDesc = "Ghoul," + descriptor + ",8,0,13,15,6,1,d8 claws 2x," + tagA
+        + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getGiant() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('giaA').innerText
+   let tagB = document.getElementById('giaB').innerText
+   let tagC = document.getElementById('giaC').innerText
+   let fullDesc = "Giant," + descriptor + ",12,1,15,9,9,2,d8 weapon,d6b sweep," + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getGnoll() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('gnoA').innerText
+   let fullDesc = "Gnoll," + descriptor + ",3,0,11,11,8,1,d6 weapon," + tagA
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getGnome() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('gnmA').innerText
+   let tagB = document.getElementById('gnmB').innerText
+   let tagC = document.getElementById('gnmC').innerText
+   let fullDesc = "Gnome," + descriptor + ",6,2,8,16,18,1,d4 stone," + tagA + "," + tagB + "," + tagC
+navigator.clipboard.writeText( fullDesc );   }
+
+function getGoblin() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('gobA').innerText
+   let fullDesc = "Goblin," + descriptor + ",2,0,8,14,7,1,d4 weapon," + tagA
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getHippog() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('hpgA').innerText
+   let tagB = document.getElementById('hpgB').innerText
+   let fullDesc = "Hippogriff," + descriptor + ",8,1,14,14,8,1,d6b rend," + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getHorse() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('hseA').innerText
+  let fullDesc = "Horse," + descriptor + ",2,0,13,13,7,1,d4 bite,"
+            + tagA
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getHound() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById( 'hndA').innerText
+   let fullDesc = "Hound," + descriptor + ",5,0,9,11,10,1,d6 bite," + tagA
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getJawa() {
+  let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+  let tagA = document.getElementById('jawaA').innerText
+  let tagB = document.getElementById('jawaB').innerText
+  let tagC = document.getElementById('jawaC').innerText
+  let fullDesc = "Jawa," + descriptor + ",3,1,8,12,8,1,d6 weapon,"
+            + tagA + "," + tagB + "," + tagC
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getLitch() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('litA').innerText
+   let tagB = document.getElementById('litB').innerText
+   let tagC = document.getElementById('litC').innerText
+   let tagD = document.getElementById('litD').innerText
+   let tagE = document.getElementById('litE').innerText
+   let tagF = document.getElementById('litF').innerText
+   let fullDesc = "Litch," + descriptor + ",12,2,12,8,17,1,d8 touch,"
+             + tagA + "," + tagB + "," + tagC + "," + tagD + "," + tagE + "," + tagF
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getManties() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('mtcA').innerText
+  let tagB = document.getElementById('mtcB').innerText
+  let tagC = document.getElementById('mtcC').innerText
+  let fullDesc = "Manticore," + descriptor + ",7,1,12,12,9,2,d6 var,d4b spike,"
+            + tagA + "," + tagB + "," + tagC
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getMedusa() {
+  let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+  let tagA = document.getElementById('medA').innerText
+  let tagB = document.getElementById('medB').innerText
+  let tagC = document.getElementById('medC').innerText
+  let tagD = document.getElementById('medD').innerText
+  let fullDesc = "Medusa," + descriptor + ",8,0,10,8,15,1,d6 bite,"
+            + tagA + "," + tagB + "," + tagC + "," + tagD
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getMindF() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('mflA').innerText
+   let tagB = document.getElementById('mflB').innerText
+   let tagC = document.getElementById('mflC').innerText
+   let fullDesc = "Mind Flayer," + descriptor + ",10,1,12,13,17,1,d8 weapon,"
+             + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getMino() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('minA').innerText
+  let tagB = document.getElementById('minB').innerText
+  let fullDesc = "Minotaur," + descriptor + ",8,0,16,9,12,2,d6 gore,d8 weapon,"
+            + tagA + "," + tagB
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getMummy() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('mumA').innerText
+   let tagB = document.getElementById('mumB').innerText
+   let tagC = document.getElementById('mumC').innerText
+   let fullDesc = "Mummy," + descriptor + ",18,0,16,7,8,1,d8 fists,"
+             + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getOrc() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('orcA').innerText
+   let tagB = document.getElementById('orcB').innerText
+   let fullDesc = "Orc," + descriptor + ",8,1,14,9,8,1,d6 weapon 2x,"
+             + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getOwlB() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('owbA').innerText
+   let tagB = document.getElementById('owbB').innerText
+   let fullDesc = "Owlbear," + descriptor + ",10,0,16,12,9,2,d6 claws 2x,d6 beak,"
+             + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getRusty() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('rmoA').innerText
+   let tagB = document.getElementById('rmoB').innerText
+   let fullDesc = "Rust Monster," + descriptor + ",8,2,8,12,6,1,d6 bite,"
+             + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getSalam() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('salaA').innerText
+  let tagB = document.getElementById('salaB').innerText
+  let tagC = document.getElementById('salaC').innerText
+  let fullDesc = "Salamander," + descriptor + ",10,1,12,13,8,2,d4 claws,d6 bite,"
+            + tagA + "," + tagB + "," + tagC
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getSkelly() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById( 'skeA').innerText
+   let tagB = document.getElementById('skeB').innerText
+   let fullDesc = "Skelly," + descriptor + ",5,2,8,8,5,1,d6 weapon," + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getSmol() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('smoA').innerText
+   let tagB = document.getElementById('smoB').innerText
+   let tagC = document.getElementById('smoC').innerText
+   let tagD = document.getElementById('smoD').innerText
+   let fullDesc = "Smol Dragon," + descriptor + ",12,3,15,16,14,1,d8 bite," + tagA
+        + "," + tagB + "," + tagC + "," + tagD
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getSpaceM() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('spmA').innerText
+   let tagB = document.getElementById('spmB').innerText
+   let fullDesc = "Space-man," + descriptor + ",4,2,10,8,10,1,d6 heat ray,"
+             + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getSpider() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('spdA').innerText
+   let tagB = document.getElementById('spdB').innerText
+   let fullDesc = "Giant Spider," + descriptor + ",3,1,8,14,6,1,d6 bite,"
+             + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getToad() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('toadA').innerText
+  let tagB = document.getElementById('toadB').innerText
+  let tagC = document.getElementById('toadC').innerText
+  let fullDesc = "Toad," + descriptor + ",7,0,11,13,6,2,d6b crush,d4 digest,"
+            + tagA + "," + tagB + "," + tagC
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getTroll() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('trlA').innerText
+   let tagB = document.getElementById('trlB').innerText
+   let tagC = document.getElementById('trlC').innerText
+   let fullDesc = "Troll," + descriptor + ",8,0,12,11,7,1,d8 rake,"
+             + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getVampire() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('vampA').innerText
+   let tagB = document.getElementById('vampB').innerText
+   let tagC = document.getElementById('vampC').innerText
+   let tagD = document.getElementById('vampD').innerText
+   let fullDesc = "Vampire," + descriptor + ",14,1,17,16,17,1,d10 weapon,"
+        + tagA + "," + tagB + "," + tagC + "," + tagD
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getVamSpwn() {
+  let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+  let tagA = document.getElementById('vmspA').innerText
+  let tagB = document.getElementById('vmspB').innerText
+  let fullDesc = "Vamp Spawn," + descriptor + ",6,1,14,16,8,2,d6 weap,d8 bite,"
+            + tagA + "," + tagB
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getWaHrs() {
+  let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+  let tagA = document.getElementById('whsA').innerText
+  let tagB = document.getElementById('whsB').innerText
+  let fullDesc = "Warhorse," + descriptor + ",8,0,15,10,9,1,d6 kick,"
+            + tagA + "," + tagB
+  navigator.clipboard.writeText( fullDesc );     }
+
+function getWolf() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('wlfA').innerText
+   let fullDesc = "Wolf," + descriptor + ",4,0,12,15,7,1,d6 bite,"
+             + tagA
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getWraith() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('wraA').innerText
+   let tagB = document.getElementById('wraB').innerText
+   let tagC = document.getElementById('wraC').innerText
+   let fullDesc = "Wraith," + descriptor + ",7,2,7,16,13,1,d6 touch," + tagA + "," + tagB + "," + tagC
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getWyvern() {
+   let descriptor = animaAdjList[ Math.floor(Math.random() * animaAdjList.length) ];
+   let tagA = document.getElementById('wyvA').innerText
+   let tagB = document.getElementById('wyvB').innerText
+   let fullDesc = "Wyvern," + descriptor + ",10,2,15,9,7,2,d10 bite,d6b tail,"
+             + tagA + "," + tagB
+   navigator.clipboard.writeText( fullDesc );     }
+
+function getZombo() {
+   let descriptor = humanAdjList[ Math.floor(Math.random() * humanAdjList.length) ];
+   let tagA = document.getElementById('zomA').innerText
+   let tagB = document.getElementById('zomB').innerText
+   let tagC = document.getElementById('zomC').innerText
+   let tagD = document.getElementById('zomD').innerText
+   let tagE = document.getElementById('zomE').innerText
+   let fullDesc = "Zomboy," + descriptor + ",12,0,12,6,3,1,d4 bite," + tagA +
+                     "," + tagB + "," + tagC + "," + tagD + "," + tagE
+   navigator.clipboard.writeText( fullDesc );     }
+
+</script>
+
+<p><br><a href="index.html">Return to Index</a><br><br></p>
+</body>
+</html>
+
